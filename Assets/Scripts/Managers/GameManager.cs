@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public PlayerManager PlayerManager;
     public ObstacleManager ObstacleManager;
     public StackManager StackManager;
+    public AudioManager AudioManager;
     [Header("CONTROLLERS")]
     public TouchController TouchController;
     public SuperPowerController SuperPowerController;

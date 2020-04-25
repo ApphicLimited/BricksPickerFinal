@@ -60,6 +60,15 @@ public class StackCollector : MonoBehaviour
         transform.localScale = new Vector3(CollecterMinScale, transform.localScale.y, transform.localScale.z);
     }
 
+    private void BalanceMassScale(float mass)
+    {
+        GameManager.instance.PlayerManager.Player.Rigidbody.mass += mass;
+        //GameManager.instance.PlayerManager.Player.GetComponent<FixedJoint>().connectedMassScale += mass;
+        GetComponent<Rigidbody>().mass += mass;
+
+        GameManager.instance.PlayerManager.Player.Rigidbody.mass += mass;
+    }
+
     private void DoSomething()
     {
         for (int i = 0; i < CollectedStacks.Count; i++)
@@ -94,17 +103,14 @@ public class StackCollector : MonoBehaviour
                             DoSomething);
 
                         CollectedStacks[i].Elastic.AnimationSpeed -= GameManager.instance.StackManager.PerStackWaveReductionAmount;
-                        GameManager.instance.PlayerManager.Player.Rigidbody.mass += CollectedStacks[i].Rigidbody.mass;
-                        GameManager.instance.PlayerManager.Player.GetComponent<FixedJoint>().connectedMassScale += CollectedStacks[i].Rigidbody.mass;
-                        GetComponent<Rigidbody>().mass += CollectedStacks[i].Rigidbody.mass;
-
-                        GameManager.instance.PlayerManager.Player.Rigidbody.mass += CollectedStacks[i].Rigidbody.mass;
+                        BalanceMassScale(CollectedStacks[i].Rigidbody.mass);
 
                         if (CollectedStacks[i].Elastic.AnimationSpeed < GameManager.instance.StackManager.MinStackWaveStrength)
                             CollectedStacks[i].Elastic.AnimationSpeed = GameManager.instance.StackManager.MinStackWaveStrength;
                     }
                 }
 
+                GameManager.instance.AudioManager.PlayClip("CollectBrick");
                 GameManager.instance.SuperPowerController.AddPower(CollectedStacks.Last().Point);
                 GameManager.instance.ScoreController.CurrentCollectedStackNumber++;
                 GameManager.instance.StackManager.Stacks.Remove(collision.collider.GetComponent<Stack>());

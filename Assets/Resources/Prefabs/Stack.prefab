@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7814002209245637625}
   - component: {fileID: 7814002209245637629}
   - component: {fileID: 2086154974337902190}
-  - component: {fileID: 29040596}
+  - component: {fileID: -1851102567851547422}
   m_Layer: 0
   m_Name: Stack
   m_TagString: Stack
@@ -112,7 +112,7 @@ MonoBehaviour:
   Point: 1
   Elastic: {fileID: 2086154974337902190}
   MeshRenderer: {fileID: 7814002209245637630}
-  Rigidbody: {fileID: 29040596}
+  Rigidbody: {fileID: -1851102567851547422}
 --- !u!114 &2086154974337902190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   AnimationSpeed: 0
---- !u!54 &29040596
+--- !u!54 &-1851102567851547422
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public Clips[] Audioclips;
 
-    private static List<SourceInfo> sources = new List<SourceInfo>();
+    private List<SourceInfo> sources = new List<SourceInfo>();
 
     private void Awake()
     {
@@ -16,6 +16,17 @@ public class AudioManager : MonoBehaviour
 
         SetToogleVolume();
         SetVolume();
+    }
+
+    private void Update()
+    {
+        foreach (var source in sources)
+        {
+            if ("CollectBrick".ToLower() == source.Source.gameObject.name.ToLower())
+            {
+                source.Source.Play();
+            }
+        }
     }
 
     private void CreateSources()
@@ -38,7 +49,9 @@ public class AudioManager : MonoBehaviour
         foreach (var source in sources)
         {
             if (audioClipName.ToLower() == source.Source.gameObject.name.ToLower())
+            {
                 source.Source.Play();
+            }
         }
     }
 
@@ -50,14 +63,16 @@ public class AudioManager : MonoBehaviour
             {
                 if (sources[i].Source != null)
                 {
-                    sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.EFFECT_VOLUME_AMOUNT_KEY);
+                    sources[i].Source.volume = 1;
+                    //sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.EFFECT_VOLUME_AMOUNT_KEY);
                 }
             }
             else
             {
                 if (sources[i].Source != null)
                 {
-                    sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.MUSIC_VOLUME_AMOUNT_KEY);
+                    sources[i].Source.volume = 1;
+                    //sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.MUSIC_VOLUME_AMOUNT_KEY);
                 }
             }        
         }
@@ -65,22 +80,24 @@ public class AudioManager : MonoBehaviour
 
     public void SetToogleVolume()
     {
-        int effectVolumeToggle = PlayerPrefs.GetInt(Constants.EFFECT_VOLUME_TOOGLE_KEY);
-        int musicVolumeToggle = PlayerPrefs.GetInt(Constants.MUSIC_VOLUME_TOOGLE_KEY);
+        //int effectVolumeToggle = PlayerPrefs.GetInt(Constants.EFFECT_VOLUME_TOOGLE_KEY);
+        //int musicVolumeToggle = PlayerPrefs.GetInt(Constants.MUSIC_VOLUME_TOOGLE_KEY);
+        //int effectVolumeToggle = 1;
+        //int musicVolumeToggle = 1;
 
-        for (int i = 0; i < sources.Count; i++)
-        {
-            if (sources[i].ClipStyle == ClipStyle.Effect)
-            {
-                if (sources[i].Source != null)
-                    sources[i].Source.mute = (effectVolumeToggle == 1) ? false : true;
-            }
-            else
-            {
-                if (sources[i].Source != null)
-                    sources[i].Source.mute = (musicVolumeToggle == 1) ? false : true;
-            }
-        }
+        //for (int i = 0; i < sources.Count; i++)
+        //{
+        //    if (sources[i].ClipStyle == ClipStyle.Effect)
+        //    {
+        //        if (sources[i].Source != null)
+        //            sources[i].Source.mute = (effectVolumeToggle == 1) ? false : true;
+        //    }
+        //    else
+        //    {
+        //        if (sources[i].Source != null)
+        //            sources[i].Source.mute = (musicVolumeToggle == 1) ? false : true;
+        //    }
+        //}
     }
 
     public void PauseClip(string clipName)

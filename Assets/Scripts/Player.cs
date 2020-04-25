@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        //StackCollector.transform.position = new Vector3(transform.position.x, StackCollector.transform.position.y, transform.position.z + 1.4f);
+        StackCollector.transform.position = new Vector3(transform.position.x, StackCollector.transform.position.y, transform.position.z + 1.9f);
 
         transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed);
         nextPosition.z = transform.position.z;
@@ -84,11 +84,13 @@ public class Player : MonoBehaviour
         IsArrived = true;
 
         Destroy(GetComponent<FixedJoint>());
-        StackCollector.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 3f);
+        Rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionY;
+
         StackCollector.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionZ;
+        StackCollector.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 5f);
         PlayKickAnim();
         //Jump up
-        Rigidbody.velocity = new Vector3(0f, 7f, 1.5f);
+        Rigidbody.velocity = new Vector3(0f, 5f, 1f);
         GameManager.instance.TimeController.DoSlowMotion();
         GameManager.instance.GameState = GameStates.GamePaused;
     }
@@ -108,8 +110,7 @@ public class Player : MonoBehaviour
     {
         GameManager.instance.SmothFollow.GoForward();
         StackCollector.ResetJointSettings();
-        Destroy(gameObject);
-       GameManager.instance.TimeController.StopSlowMotion();
+        GameManager.instance.TimeController.StopSlowMotion();
     }
 
     #endregion
