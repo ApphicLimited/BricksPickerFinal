@@ -6,6 +6,7 @@ public class Stack : MonoBehaviour
 {
     public BaseColour MainColour;
     public int Point;
+    public bool IsBigStack;
     public Elastic Elastic;
     public MeshRenderer MeshRenderer;
     public Rigidbody Rigidbody;

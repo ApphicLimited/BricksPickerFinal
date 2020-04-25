@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public ObstacleManager ObstacleManager;
     public StackManager StackManager;
     public AudioManager AudioManager;
+    public PanelManager PanelManager;
     [Header("CONTROLLERS")]
     public TouchController TouchController;
     public SuperPowerController SuperPowerController;
@@ -23,8 +24,10 @@ public class GameManager : MonoBehaviour
 
     public GameStates GameState;
     public bool IsGameStarted;
+    public bool IsGameDone;
 
     public event Action OnGameStarted;
+    public event Action OnGameDone;
 
     public static GameManager instance;
 
@@ -53,6 +56,11 @@ public class GameManager : MonoBehaviour
         {
             OnGameStarted?.Invoke();
             IsGameStarted = false;
+        }
+        else if (IsGameDone)
+        {
+            OnGameDone?.Invoke();
+            IsGameDone = false;
         }
     }
 }

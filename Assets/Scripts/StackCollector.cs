@@ -63,10 +63,17 @@ public class StackCollector : MonoBehaviour
     private void BalanceMassScale(float mass)
     {
         GameManager.instance.PlayerManager.Player.Rigidbody.mass += mass;
-        //GameManager.instance.PlayerManager.Player.GetComponent<FixedJoint>().connectedMassScale += mass;
         GetComponent<Rigidbody>().mass += mass;
 
         GameManager.instance.PlayerManager.Player.Rigidbody.mass += mass;
+    }
+
+    private void PlaySound()
+    {
+        if (CollectedStacks.Last().IsBigStack)
+            GameManager.instance.AudioManager.PlayClip("CollectBigBrick");
+        else
+            GameManager.instance.AudioManager.PlayClip("CollectBrick");
     }
 
     private void DoSomething()
@@ -110,7 +117,8 @@ public class StackCollector : MonoBehaviour
                     }
                 }
 
-                GameManager.instance.AudioManager.PlayClip("CollectBrick");
+                PlaySound();
+
                 GameManager.instance.SuperPowerController.AddPower(CollectedStacks.Last().Point);
                 GameManager.instance.ScoreController.CurrentCollectedStackNumber++;
                 GameManager.instance.StackManager.Stacks.Remove(collision.collider.GetComponent<Stack>());

@@ -63,16 +63,14 @@ public class AudioManager : MonoBehaviour
             {
                 if (sources[i].Source != null)
                 {
-                    sources[i].Source.volume = 1;
-                    //sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.EFFECT_VOLUME_AMOUNT_KEY);
+                    sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.EFFECT_VOLUME_AMOUNT_KEY);
                 }
             }
             else
             {
                 if (sources[i].Source != null)
                 {
-                    sources[i].Source.volume = 1;
-                    //sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.MUSIC_VOLUME_AMOUNT_KEY);
+                    sources[i].Source.volume = PlayerPrefs.GetFloat(Constants.MUSIC_VOLUME_AMOUNT_KEY);
                 }
             }        
         }
@@ -80,24 +78,22 @@ public class AudioManager : MonoBehaviour
 
     public void SetToogleVolume()
     {
-        //int effectVolumeToggle = PlayerPrefs.GetInt(Constants.EFFECT_VOLUME_TOOGLE_KEY);
-        //int musicVolumeToggle = PlayerPrefs.GetInt(Constants.MUSIC_VOLUME_TOOGLE_KEY);
-        //int effectVolumeToggle = 1;
-        //int musicVolumeToggle = 1;
+        int effectVolumeToggle = PlayerPrefs.GetInt(Constants.EFFECT_VOLUME_TOOGLE_KEY);
+        int musicVolumeToggle = PlayerPrefs.GetInt(Constants.MUSIC_VOLUME_TOOGLE_KEY);
 
-        //for (int i = 0; i < sources.Count; i++)
-        //{
-        //    if (sources[i].ClipStyle == ClipStyle.Effect)
-        //    {
-        //        if (sources[i].Source != null)
-        //            sources[i].Source.mute = (effectVolumeToggle == 1) ? false : true;
-        //    }
-        //    else
-        //    {
-        //        if (sources[i].Source != null)
-        //            sources[i].Source.mute = (musicVolumeToggle == 1) ? false : true;
-        //    }
-        //}
+        for (int i = 0; i < sources.Count; i++)
+        {
+            if (sources[i].ClipStyle == ClipStyle.Effect)
+            {
+                if (sources[i].Source != null)
+                    sources[i].Source.mute = (effectVolumeToggle == 1) ? false : true;
+            }
+            else
+            {
+                if (sources[i].Source != null)
+                    sources[i].Source.mute = (musicVolumeToggle == 1) ? false : true;
+            }
+        }
     }
 
     public void PauseClip(string clipName)

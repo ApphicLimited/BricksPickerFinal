@@ -13,6 +13,7 @@ public class Constants
     public const string MUSIC_VOLUME_AMOUNT_KEY = "musicvolume";
     public const string EFFECT_VOLUME_TOOGLE_KEY = "effecttoggle"; 
     public const string MUSIC_VOLUME_TOOGLE_KEY = "musictoggle";
+    public const string BEST_SCORE_KEY = "bestscore";
 }
 
 [Serializable]

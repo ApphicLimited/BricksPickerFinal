@@ -30,6 +30,7 @@ public class ScoreController : MonoBehaviour
     void Start()
     {
         GameManager.instance.OnGameStarted += OnGameStarted;
+        GameManager.instance.OnGameDone += OnGameDone;
     }
 
     // Update is called once per frame
@@ -38,11 +39,29 @@ public class ScoreController : MonoBehaviour
 
     }
 
+    private void CheckBestScore()
+    {
+        if (PlayerPrefs.HasKey(Constants.BEST_SCORE_KEY))
+        {
+            if (CurrentCollectedStackNumber > PlayerPrefs.GetInt(Constants.BEST_SCORE_KEY))
+            {
+                PlayerPrefs.SetInt(Constants.BEST_SCORE_KEY, CurrentCollectedStackNumber);
+                GameManager.instance.PanelManager.HighScorePanel.AppearUp();
+            }
+        }
+    }
+
     #region Events
 
     private void OnGameStarted()
     {
+        CurrentCollectedStackNumber = 0;
+        FurtherStackMetre = 0;
+    }
 
+    private void OnGameDone()
+    {
+        CheckBestScore();
     }
 
     private void OnDestroy()

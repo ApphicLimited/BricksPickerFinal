@@ -18,6 +18,9 @@ public class ColourChanger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == Constants.TAG_PLAYER)
+        {
+            GameManager.instance.AudioManager.PlayClip("CollectGoThroughColorFlow");
             GameManager.instance.PlayerManager.ChangePlayerColour(MainColour);
+        }
     }
 }
