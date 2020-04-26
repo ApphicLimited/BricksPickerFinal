@@ -123,5 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationSpeed: 3
-  StartAnimation: 0
   nextPosition: {x: 0, y: 500, z: 0}
+  SetNativePosition: 0
+  MoveAllAxis: 0
+  XAxis: 0
+  YAxis: 1
+  ZAxis: 0
