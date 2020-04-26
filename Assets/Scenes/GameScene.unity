@@ -604,7 +604,12 @@ PrefabInstance:
     - target: {fileID: 540230646114613649, guid: 99b223b2542c0d54e9698b5c4641044d,
         type: 3}
       propertyPath: PerStackWaveReductionAmount
-      value: 1.2
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 540230646114613649, guid: 99b223b2542c0d54e9698b5c4641044d,
+        type: 3}
+      propertyPath: MaxStackWaveStrength
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 540230647410594416, guid: 99b223b2542c0d54e9698b5c4641044d,
         type: 3}
