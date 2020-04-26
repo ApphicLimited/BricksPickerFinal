@@ -7,13 +7,16 @@ public class StackCollector : MonoBehaviour
 {
     public float CollecterMaxScale;
     public float CollecterMinScale;
-    public MeshRenderer MeshRenderer;
+    public MeshRenderer Holder;
+    public MeshRenderer Stick1;
+    public MeshRenderer Stick2;
+    public MeshRenderer Head;
 
     [HideInInspector]
     public List<Stack> CollectedStacks = new List<Stack>();
     private Material materialClone;
 
-    private float perStackHeightDistance = 0.5f;
+    private float perStackHeightDistance = 0.35f;
 
     private void Start()
     {
@@ -24,7 +27,10 @@ public class StackCollector : MonoBehaviour
     public void SetUpMaterial()
     {
         materialClone = new Material(GameManager.instance.PlayerManager.MaterialSource);
-        MeshRenderer.material = materialClone;
+        Holder.material = materialClone;
+        Stick1.material = materialClone;
+        Stick2.material = materialClone;
+        Head.material = materialClone;
     }
 
     public void ChangeColour(BaseColour colour)
@@ -52,12 +58,12 @@ public class StackCollector : MonoBehaviour
 
     private void UseMaxScale()
     {
-        transform.localScale = new Vector3(CollecterMaxScale, transform.localScale.y, transform.localScale.z);
+        Head.transform.localScale = new Vector3(CollecterMaxScale, transform.localScale.y, transform.localScale.z);
     }
 
     private void UseMinScale()
     {
-        transform.localScale = new Vector3(CollecterMinScale, transform.localScale.y, transform.localScale.z);
+        Head.transform.localScale = new Vector3(CollecterMinScale, transform.localScale.y, transform.localScale.z);
     }
 
     private void BalanceMassScale(float mass)
@@ -71,9 +77,13 @@ public class StackCollector : MonoBehaviour
     private void PlaySound()
     {
         if (CollectedStacks.Last().IsBigStack)
+        {
             GameManager.instance.AudioManager.PlayClip("CollectBigBrick");
+        }
         else
+        {
             GameManager.instance.AudioManager.PlayClip("CollectBrick");
+        }
     }
 
     private void DoSomething()
@@ -92,14 +102,15 @@ public class StackCollector : MonoBehaviour
 
                 if (CollectedStacks.Count == 1)
                 {
-                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, perStackHeightDistance, transform.position.z), DoSomething);
+                    Debug.Log("Calisti "+ CollectedStacks.Count);
+                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z), DoSomething);
                     CollectedStacks.Last().Elastic.AnimationSpeed = GameManager.instance.StackManager.MaxStackWaveStrength;
                 }
                 else
                 {
                     float perAnimationRange = CollectedStacks.Count / GameManager.instance.StackManager.MaxStackWaveStrength;
 
-                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, perStackHeightDistance, transform.position.z), DoSomething);
+                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z), DoSomething);
                     CollectedStacks.Last().Elastic.AnimationSpeed = GameManager.instance.StackManager.MaxStackWaveStrength;
 
                     for (int i = 0; i < CollectedStacks.Count - 1; i++)

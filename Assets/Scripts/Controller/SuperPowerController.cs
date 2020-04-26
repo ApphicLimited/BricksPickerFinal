@@ -10,6 +10,8 @@ public class SuperPowerController : MonoBehaviour
     public Transform ParentCanvas;
     public StackPoint PlusStuckPoint;
     public StackPoint MinusStackPoint;
+    public Animation RedlightPanel;
+    public AudioManager RedlightAudio;
 
     public float CurrentPower { get; set; }
     public bool IsPowerFull { get; set; }
@@ -67,7 +69,16 @@ public class SuperPowerController : MonoBehaviour
             CurrentPower = 0;
 
         SpawnMinus(GameManager.instance.PlayerManager.Player.StackCollector.transform.position);
+
+        if (RedlightPanel.isPlaying)
+        {
+            RedlightPanel.Stop();
+        }
+        RedlightPanel.Play("FadeInFadeOut");
+        RedlightAudio.PlayClip("Audio_Redlight");
     }
+
+
 
     private void SpawnPlus(Vector3 pos)
     {

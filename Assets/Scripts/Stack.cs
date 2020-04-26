@@ -10,6 +10,7 @@ public class Stack : MonoBehaviour
     public Elastic Elastic;
     public MeshRenderer MeshRenderer;
     public Rigidbody Rigidbody;
+    public Animation animation;
 
     public BaseColour CurrentColour { get; set; }
 
@@ -20,6 +21,7 @@ public class Stack : MonoBehaviour
 
     private void Start()
     {
+        animation = GetComponent<Animation>();
         SetUpMaterial();
         ChangeColour(MainColour);
     }
@@ -62,6 +64,21 @@ public class Stack : MonoBehaviour
             Rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionX;
             Rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionZ;
             GetComponent<BoxCollider>().enabled = true;
+
+            if(animation.isPlaying)
+            {
+                animation.Stop();
+            }
+            if(transform.name == "Stack")
+            {
+                animation.Play("BrickScale");
+            }
+            else
+            {
+                animation.Play("BrickScale2");
+            }
+            
+
 
         }
         else
