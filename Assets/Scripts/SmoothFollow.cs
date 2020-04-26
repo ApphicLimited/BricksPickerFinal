@@ -18,12 +18,6 @@ public class SmoothFollow : MonoBehaviour
     // Place the script in the Camera-Control group in the component menu
     [AddComponentMenu("Camera-Control/Smooth Follow")]
     private bool isGoingForward;
-    private float waitingSeconds;
-
-    private void Start()
-    {
-        waitingSeconds = 5;
-    }
 
     void Update()
     {
