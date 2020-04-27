@@ -129,6 +129,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6273919609931514527, guid: 903278ced46af404db02965d72dbd54e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273919609931514527, guid: 903278ced46af404db02965d72dbd54e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273919609931514527, guid: 903278ced46af404db02965d72dbd54e,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6273919610181768409, guid: 903278ced46af404db02965d72dbd54e,
         type: 3}
       propertyPath: m_Name
@@ -228,6 +243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273919611436904776, guid: 903278ced46af404db02965d72dbd54e,
+        type: 3}
+      propertyPath: MaxStackWaveStrength
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 903278ced46af404db02965d72dbd54e, type: 3}

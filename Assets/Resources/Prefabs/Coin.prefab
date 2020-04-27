@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2058128977230661001}
   - component: {fileID: 2058128977230661002}
   - component: {fileID: 2058128977230661005}
+  - component: {fileID: 3117245446237509219}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -125,6 +126,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParticleSystem: {fileID: 19800004, guid: 757df604761b8ef42831192c70ee1099, type: 3}
+--- !u!122 &3117245446237509219
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058128977230661003}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278214759
+  m_Size: 2
 --- !u!1001 &2706728807079490913
 PrefabInstance:
   m_ObjectHideFlags: 0
