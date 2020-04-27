@@ -11,6 +11,7 @@ public class SuperPowerController : MonoBehaviour
     public StackPoint PlusStuckPoint;
     public StackPoint MinusStackPoint;
     public Animation RedlightPanel;
+    public KickPowerBar KickPowerBar;
     public AudioManager RedlightAudio;
 
     public float CurrentPower { get; set; }
@@ -39,6 +40,10 @@ public class SuperPowerController : MonoBehaviour
                 OnSuperPowerActivated?.Invoke(false);
             }
         }
+
+        if (GameManager.instance.SmothFollow.CameraMovement.IsApproachedToEndPoint)
+            KickPowerBar.gameObject.SetActive(true);
+
     }
 
     public void AddPower(float stackPoint)

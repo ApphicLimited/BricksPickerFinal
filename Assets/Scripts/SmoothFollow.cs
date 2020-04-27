@@ -3,7 +3,6 @@ using System.Collections;
 
 public class SmoothFollow : MonoBehaviour
 {
-
     public CameraMovement CameraMovement;
     // The target we are following
     public Transform target;

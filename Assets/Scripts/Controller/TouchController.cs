@@ -36,15 +36,10 @@ public class TouchController : MonoBehaviour
 
     private void TouchDetect()
     {
-        
-         if( Input.GetMouseButtonDown(0) )
-        {
+        if (Input.GetMouseButtonDown(0))
             initialPos = Input.mousePosition;
-        }
-        if( Input.GetMouseButtonUp(0))
-        {       
+        if (Input.GetMouseButtonUp(0))
             Calculate(Input.mousePosition);
-        }
 
 
 
@@ -68,10 +63,6 @@ public class TouchController : MonoBehaviour
         //}
     }
 
-
-
-
-
     void Calculate(Vector3 finalPos)
     {
         float disX = Mathf.Abs(initialPos.x - finalPos.x);
@@ -81,24 +72,9 @@ public class TouchController : MonoBehaviour
             if (disX > disY)
             {
                 if (initialPos.x > finalPos.x)
-                {
                     GameManager.instance.PlayerManager.MoveToSide(TouchSides.Left);
-                }
                 else
-                {
                     GameManager.instance.PlayerManager.MoveToSide(TouchSides.Right);
-                }
-            }
-            else
-            {
-                if (initialPos.y > finalPos.y)
-                {
-                    Debug.Log("Down");
-                }
-                else
-                {
-                    Debug.Log("Up");
-                }
             }
         }
     }

@@ -19,8 +19,7 @@ public class CameraMovement : MonoBehaviour
     private Vector3 desiredPosition2 = Vector3.zero;
     private Vector3 Velocity = Vector3.zero;
     private bool isGoingForward;
-    private bool IsApproachedToEndPoint;
-
+    public bool IsApproachedToEndPoint { get; set; }
 
     public SmoothFollow follow;
 
@@ -36,7 +35,7 @@ public class CameraMovement : MonoBehaviour
         if (GameManager.instance.GameState == GameStates.GameFinished)
             return;
 
-        if (Mathf.Abs(transform.position.z - GameManager.instance.PlayerManager.EndTransform.position.z) < 30f)
+        if (Mathf.Abs(transform.position.z - GameManager.instance.PlayerManager.EndTransform.position.z) < 50f)
             IsApproachedToEndPoint = true;
 
         AdjustCamPos();
@@ -49,7 +48,7 @@ public class CameraMovement : MonoBehaviour
             desiredPosition = KickingPos.position;
             transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref Velocity, SmoothSpeed);
             transform.LookAt(currentTarget);
-            //follow.enabled = false;
+
         }
         else if (GameManager.instance.GameState == GameStates.GameOnGoing && follow.target != InGamePos && follow.target != KickingPos)
         {

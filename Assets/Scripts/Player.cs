@@ -41,18 +41,16 @@ public class Player : MonoBehaviour
 
         transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed);
         nextPosition.z = transform.position.z;
+    }
+
+    private void FixedUpdate()
+    {
+        if (GameManager.instance.SmothFollow.CameraMovement.IsApproachedToEndPoint)
+            return;
 
         float step = Speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, nextPosition, step);
     }
-
-    //private void FixedUpdate()
-    //{
-    //    if (GameManager.instance.GameState != GameStates.GameOnGoing)
-    //        return;
-
-     
-    //}
 
     public void SetUpMaterial()
     {
