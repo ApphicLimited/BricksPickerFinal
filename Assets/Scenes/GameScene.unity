@@ -30408,7 +30408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextPoint: {fileID: 0}
-  AnimationSpeed: 7
+  AnimationSpeed: 3
   StartAnimation: 0
 --- !u!114 &658173961
 MonoBehaviour:
@@ -30422,7 +30422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679346a58fe751341a8c79a8b95a9621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationSpeed: 3
+  AnimationSpeed: 2
   nextPosition: {x: 0, y: 100, z: 0}
   SetNativePosition: 0
   MoveAllAxis: 0
@@ -57348,7 +57348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextPoint: {fileID: 1098981333}
-  AnimationSpeed: 5
+  AnimationSpeed: 3
   StartAnimation: 0
 --- !u!114 &1098981332
 MonoBehaviour:
@@ -57362,7 +57362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679346a58fe751341a8c79a8b95a9621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationSpeed: 3
+  AnimationSpeed: 2
   nextPosition: {x: 0, y: 400, z: 0}
   SetNativePosition: 0
   MoveAllAxis: 0

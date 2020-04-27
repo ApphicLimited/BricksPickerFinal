@@ -19,10 +19,7 @@ public class KickPowerBar : MonoBehaviour
     {
         FillAmount.fillAmount = 0.3f;
 
-        AnimationHandGestureMove.StartAnimation = true;
-        AnimationTextMove.StartAnimation = true;
-        AnimationHandGestureFadeOut.StartAnimation = true;
-        AnimationTextFadeOut.StartAnimation = true;
+        StartCoroutine(StarAnimations(2));
     }
 
     void Update()
@@ -40,5 +37,15 @@ public class KickPowerBar : MonoBehaviour
         FillAmount.fillAmount -= Time.deltaTime * 0.1f;
 
         GameManager.instance.StackManager.StackThrowingForce = 30 * FillAmount.fillAmount;
+    }
+
+    private IEnumerator StarAnimations(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        AnimationHandGestureMove.StartAnimation = true;
+        AnimationTextMove.StartAnimation = true;
+        AnimationHandGestureFadeOut.StartAnimation = true;
+        AnimationTextFadeOut.StartAnimation = true;
     }
 }
