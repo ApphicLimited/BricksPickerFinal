@@ -9,6 +9,7 @@ public class TouchController : MonoBehaviour
     private Vector2 touchPos;
 
     public float TouchSenseDistance;
+    private Vector2 initialPos;
 
     // Update is called once per frame
     void Update()
@@ -35,17 +36,70 @@ public class TouchController : MonoBehaviour
 
     private void TouchDetect()
     {
-        switch (touchPhase)
+        
+         if( Input.GetMouseButtonDown(0) )
         {
-            case TouchPhase.Began:
-                touchPos = currentTouch.position;
-                break;
-            case TouchPhase.Ended:
-                if (currentTouch.position.x > touchPos.x + TouchSenseDistance)
-                    GameManager.instance.PlayerManager.MoveToSide(TouchSides.Right);
-                else if (currentTouch.position.x < touchPos.x + TouchSenseDistance)
+            initialPos = Input.mousePosition;
+        }
+        if( Input.GetMouseButtonUp(0))
+        {       
+            Calculate(Input.mousePosition);
+        }
+
+
+
+        //switch (touchPhase)
+        //{
+        //    case TouchPhase.Began:
+        //        touchPos = currentTouch.position;
+        //        break;
+        //    case TouchPhase.Ended:
+        //        if (currentTouch.position.x > touchPos.x + TouchSenseDistance)
+        //        {
+        //            Debug.Log("right");
+                 
+        //        }
+        //        else if (currentTouch.position.x < touchPos.x + TouchSenseDistance)
+        //        {
+        //            Debug.Log("left");
+        //            GameManager.instance.PlayerManager.MoveToSide(TouchSides.Left);
+        //        }
+        //        break;
+        //}
+    }
+
+
+
+
+
+    void Calculate(Vector3 finalPos)
+    {
+        float disX = Mathf.Abs(initialPos.x - finalPos.x);
+        float disY = Mathf.Abs(initialPos.y - finalPos.y);
+        if (disX > 0 || disY > 0)
+        {
+            if (disX > disY)
+            {
+                if (initialPos.x > finalPos.x)
+                {
                     GameManager.instance.PlayerManager.MoveToSide(TouchSides.Left);
-                break;
+                }
+                else
+                {
+                    GameManager.instance.PlayerManager.MoveToSide(TouchSides.Right);
+                }
+            }
+            else
+            {
+                if (initialPos.y > finalPos.y)
+                {
+                    Debug.Log("Down");
+                }
+                else
+                {
+                    Debug.Log("Up");
+                }
+            }
         }
     }
 }
