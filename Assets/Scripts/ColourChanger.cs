@@ -20,7 +20,7 @@ public class ColourChanger : MonoBehaviour
         if (other.tag == Constants.TAG_PLAYER)
         {
             GameManager.instance.AudioManager.PlayClip("CollectGoThroughColorFlow");
-            GameManager.instance.PlayerManager.ChangePlayerColour(MainColour);
+            GameManager.instance.PlayerManager.ChangePlayerColour(MainColour, true);
         }
     }
 }

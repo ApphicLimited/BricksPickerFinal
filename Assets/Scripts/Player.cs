@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public BaseColour BaseColour;
     public SkinnedMeshRenderer SkinnedMeshRenderer;
     public StackCollector StackCollector;
+    public ParticleSystem ColourChnagerParticleEffect;
     public Animator Animator;
     public Rigidbody Rigidbody;
 
@@ -77,11 +78,18 @@ public class Player : MonoBehaviour
         nextPosition = new Vector3(position.x, transform.position.y, transform.position.z);
     }
 
-    public void ChangeColour(BaseColour colour)
+    public void ChangeColour(BaseColour colour,bool PlayParticle)
     {
         CurrentBaseColour = colour;
         materialClone.color = GameManager.instance.ColourController.GetColour(colour);
         StackCollector.ChangeColour(colour);
+
+        if (PlayParticle)
+        {
+            ColourChnagerParticleEffect.gameObject.SetActive(true);
+            ColourChnagerParticleEffect.startColor = GameManager.instance.ColourController.GetColour(colour);
+            ColourChnagerParticleEffect.Play();
+        }
     }
 
     private void ArrivedDest()
@@ -116,6 +124,7 @@ public class Player : MonoBehaviour
         GameManager.instance.SmothFollow.GoForward();
         StackCollector.ResetJointSettings();
         GameManager.instance.TimeController.StopSlowMotion();
+        GameManager.instance.SuperPowerController.KickPowerBar.gameObject.SetActive(false);
     }
 
     #endregion
