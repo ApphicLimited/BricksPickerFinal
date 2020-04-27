@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StackManager : MonoBehaviour
 {
     public List<Stack> Stacks = new List<Stack>();
     public Material MaterialSource;
-    public Text TextStackCount;
+    public TMP_Text TextStackCount;
 
     public float MaxStackWaveStrength;
     public float MinStackWaveStrength;

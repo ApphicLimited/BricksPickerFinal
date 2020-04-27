@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CoinController : MonoBehaviour
 {
     public Coin CoinPrefab;
-    public Text TextCoin;
+    public TMP_Text TextCoin;
 
     private int collectedCoins;
     public int CollectedCoins
