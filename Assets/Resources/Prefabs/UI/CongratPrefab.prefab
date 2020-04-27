@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5364608603455631475}
   - component: {fileID: 7852194058924468781}
   m_Layer: 0
-  m_Name: CongratPrefab 1
+  m_Name: CongratPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
