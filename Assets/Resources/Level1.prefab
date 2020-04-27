@@ -12476,7 +12476,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -15186,7 +15186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c90ef38fd9e9243b49c555870f172c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CongratWordPrefab: {fileID: 3873565222924445841, guid: 4187bcc41d275aa43a25ddb28ec838fd,
+  CongratWordPrefab: {fileID: 7852194058924468781, guid: a78d4ccd58cc95440afaa34334dd4264,
     type: 3}
   SpawnPosition: {x: 0, y: -550, z: 0}
   ParentCanvas: {fileID: 2675078401809315631}
@@ -71887,9 +71887,9 @@ MonoBehaviour:
   MaxSuperPower: 20
   MaxSuperPowerUsageSecond: 5
   ParentCanvas: {fileID: 2675078401809315631}
-  PlusStuckPoint: {fileID: 593621963679201575, guid: 73707f829543f9546867aea1e1242e35,
+  PlusStuckPoint: {fileID: 5416801936324521532, guid: 8abf3b7a924057a48ab2daecc776791b,
     type: 3}
-  MinusStackPoint: {fileID: 2419708076721337300, guid: 0e2a0a8aae8cf204481e75f71b3aebc0,
+  MinusStackPoint: {fileID: 8247961979732944309, guid: 415168f6ff8a4db4ba6085a3ec3adf39,
     type: 3}
   RedlightPanel: {fileID: 2105314224632935475}
   RedlightAudio: {fileID: 2105314225176406330}

@@ -129,17 +129,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2105314224700609980, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105314224771538943, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: CongratWordPrefab
-      value: 
-      objectReference: {fileID: 7852194058924468781, guid: a78d4ccd58cc95440afaa34334dd4264,
-        type: 3}
     - target: {fileID: 2105314225017636201, guid: 903278ced46af404db02965d72dbd54e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -198,19 +187,7 @@ PrefabInstance:
     - target: {fileID: 2105314225017636202, guid: 903278ced46af404db02965d72dbd54e,
         type: 3}
       propertyPath: m_Name
-      value: Level1Copy
+      value: Level1
       objectReference: {fileID: 0}
-    - target: {fileID: 2105314226008578137, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: MinusStackPoint
-      value: 
-      objectReference: {fileID: 8247961979732944309, guid: 415168f6ff8a4db4ba6085a3ec3adf39,
-        type: 3}
-    - target: {fileID: 2105314226008578137, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: PlusStuckPoint
-      value: 
-      objectReference: {fileID: 5416801936324521532, guid: 8abf3b7a924057a48ab2daecc776791b,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 903278ced46af404db02965d72dbd54e, type: 3}
