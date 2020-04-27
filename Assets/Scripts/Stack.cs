@@ -11,7 +11,7 @@ public class Stack : MonoBehaviour
     public MeshRenderer MeshRenderer;
     public Rigidbody Rigidbody;
     public Animation animation;
-
+    public GameObject cube;
     public BaseColour CurrentColour { get; set; }
 
     private Material materialClone;
@@ -72,14 +72,12 @@ public class Stack : MonoBehaviour
             if(transform.name == "Stack")
             {
                 animation.Play("BrickScale");
+                StartCoroutine(CubeCreate());
             }
             else
             {
                 animation.Play("BrickScale2");
             }
-            
-
-
         }
         else
         {
@@ -91,6 +89,14 @@ public class Stack : MonoBehaviour
             Elastic.Target = _transform;
 
         Elastic.enabled = isEnable;
+    }
+
+
+    IEnumerator CubeCreate()
+    {
+        cube.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        cube.SetActive(false);
     }
 
     public void ThrowAway()

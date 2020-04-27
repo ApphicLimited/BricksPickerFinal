@@ -16,7 +16,7 @@ public class StackCollector : MonoBehaviour
     public List<Stack> CollectedStacks = new List<Stack>();
     private Material materialClone;
 
-    private float perStackHeightDistance = 0.35f;
+    private float perStackHeightDistance = 0.38f;
 
     private void Start()
     {
@@ -108,7 +108,7 @@ public class StackCollector : MonoBehaviour
                 }
                 else
                 {
-                    float perAnimationRange = CollectedStacks.Count / GameManager.instance.StackManager.MaxStackWaveStrength;
+                    //float perAnimationRange = CollectedStacks.Count / GameManager.instance.StackManager.MaxStackWaveStrength;
 
                     CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z), DoSomething);
                     CollectedStacks.Last().Elastic.AnimationSpeed = GameManager.instance.StackManager.MaxStackWaveStrength;
