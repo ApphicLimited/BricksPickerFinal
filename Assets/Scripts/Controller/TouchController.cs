@@ -63,7 +63,7 @@ public class TouchController : MonoBehaviour
         //        {
         //            Debug.Log("left");
         //            GameManager.instance.PlayerManager.MoveToSide(TouchSides.Left);
-        //        }
+         //        }
         //        break;
         //}
     }

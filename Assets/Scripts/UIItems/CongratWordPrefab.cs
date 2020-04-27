@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CongratWordPrefab : MonoBehaviour
 {
-    public Text TextWord;
+    public TMP_Text TextWord;
 
     public FadeOut AnimationFadeOut;
     public Move AnimationMove;

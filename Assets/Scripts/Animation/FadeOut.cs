@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FadeOut : MonoBehaviour
 {
-    public Text TextPoint;
+    public TMP_Text TextPoint;
     public float AnimationSpeed;
     public bool StartAnimation;
 
