@@ -707,7 +707,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703660709815354
 Transform:
@@ -1251,6 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703660720843290}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703660720843291}
   Metre: 4.8
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -3479,6 +3480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703660796116335}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703660796116320}
   Metre: 4.9
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -4018,7 +4020,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703660805248004
 Transform:
@@ -7211,7 +7213,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703660872332044
 Transform:
@@ -10139,6 +10141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703660906785936}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703660906785937}
   Metre: 1.5
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -11942,6 +11945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703660979861103}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703660979861088}
   Metre: 4.2
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -12451,6 +12455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703660988580039}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703660988580056}
   Metre: 1.1
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -12747,6 +12752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703660994805579}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703660994805580}
   Metre: 1.2
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -20547,6 +20553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661056095677}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661056095678}
   Metre: 3.6
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -20768,6 +20775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661060056090}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661060056091}
   Metre: 3.4
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -21294,7 +21302,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703661076081553
 Transform:
@@ -22882,6 +22890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661104106350}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661104106351}
   Metre: 2.9
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -27551,6 +27560,7 @@ MonoBehaviour:
   GameState: 2
   IsGameStarted: 1
   IsGameDone: 0
+  MetreDetecterMaterial: {fileID: 0}
 --- !u!1 &917703661182954583
 GameObject:
   m_ObjectHideFlags: 0
@@ -27660,6 +27670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661182954579}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661182954580}
   Metre: 3.1
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -29989,6 +30000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661260293454}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661260293455}
   Metre: 4.4
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -31543,6 +31555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661307590824}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661307590825}
   Metre: 5.9
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -34146,6 +34159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661380465573}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661380465574}
   Metre: 3.8
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -36960,6 +36974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661456197250}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661456197251}
   Metre: 2.5
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -37287,6 +37302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661464449785}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661464449786}
   Metre: 2.8
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -38043,7 +38059,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703661501750017
 Transform:
@@ -40574,6 +40590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661564462582}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661564462583}
   Metre: 2.3
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -42315,6 +42332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661608714305}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661608714306}
   Metre: 2.6
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -48268,6 +48286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661631735869}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661631735870}
   Metre: 4.5
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -52032,6 +52051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661719224026}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661719224027}
   Metre: 4.3
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -54704,6 +54724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661766515533}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661766515534}
   Metre: 1.6
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -56133,6 +56154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661801942917}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661801942918}
   Metre: 6
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -57019,6 +57041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661822842354}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661822842355}
   Metre: 5.3
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -57133,6 +57156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661823964471}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661823964424}
   Metre: 5.6
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -57579,7 +57603,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703661835136101
 Transform:
@@ -59708,6 +59732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661900473340}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661900473341}
   Metre: 4.7
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -60854,6 +60879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703661908864750}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703661908864751}
   Metre: 2.1
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -70831,6 +70857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662008063989}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662008063990}
   Metre: 3.2
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -75613,6 +75640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662096653812}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662096653813}
   Metre: 5.1
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -76779,7 +76807,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703662118943265
 Transform:
@@ -78037,6 +78065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662140586341}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662140586342}
   Metre: 3.5
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -81468,6 +81497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662197451683}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662197451684}
   Metre: 2.4
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -82479,6 +82509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662238113847}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662238113800}
   Metre: 2
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -83688,6 +83719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662251140933}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662251140934}
   Metre: 1.7
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -83709,7 +83741,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703662255893517
 Transform:
@@ -86484,7 +86516,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &917703662319020362
 Transform:
@@ -87527,6 +87559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662335048122}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662335048123}
   Metre: 1.3
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -87641,6 +87674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662335927866}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662335927867}
   Metre: 2.7
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -87868,6 +87902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662350669477}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662350669478}
   Metre: 3
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -88472,6 +88507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662368472641}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662368472642}
   Metre: 5.8
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -89712,6 +89748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662411858901}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662411858902}
   Metre: 4.1
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -91519,6 +91556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662451349253}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662451349254}
   Metre: 5.7
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -92055,6 +92093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662465716305}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662465716306}
   Metre: 3.7
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -93574,6 +93613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662484475021}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662484475022}
   Metre: 5.2
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -93688,6 +93728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662491421172}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662491421173}
   Metre: 5
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -94378,6 +94419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662518226551}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662518226504}
   Metre: 5.5
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -94674,6 +94716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662526724400}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662526724401}
   Metre: 4
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -96238,6 +96281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662569754987}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662569754988}
   Metre: 5.4
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -99426,6 +99470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662663632145}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662663632146}
   Metre: 3.3
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -100232,6 +100277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662682891459}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662682891460}
   Metre: 3.9
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -100528,6 +100574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662688688754}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662688688755}
   Metre: 2.2
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -102220,6 +102267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662720575045}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662720575046}
   Metre: 1.8
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -104274,6 +104322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662773617107}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662773617108}
   Metre: 1.4
   Color: {r: 0, g: 0, b: 0, a: 0}
@@ -106480,6 +106529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 917703662822992079}
+  MeshRendererGround: {fileID: 0}
   BoxCollider: {fileID: 917703662822992064}
   Metre: 4.6
   Color: {r: 0, g: 0, b: 0, a: 0}
