@@ -6,18 +6,33 @@ using UnityEngine.UI;
 public class MetreDetecter : MonoBehaviour
 {
     public MeshRenderer MeshRenderer;
+    public MeshRenderer MeshRendererGround;
     public BoxCollider BoxCollider;
     public float Metre;
     public Color Color;
     public Text TextFrontMetre;
     public Text TextBackMetre;
-    public Image ImageBackMetre;
+
+    private Material cloneMaterial;
 
     private void Start()
     {
         TextFrontMetre.text = "X"+Metre.ToString();
         TextBackMetre.text = "X"+Metre.ToString();
-        ImageBackMetre.color = Color;
+
+        MeshRendererGround = transform.GetChild(2).GetComponent<MeshRenderer>();
+    }
+
+    private void Update()
+    {
+        if (cloneMaterial == null)
+            SetUpMaterial();
+    }
+
+    private void SetUpMaterial()
+    {
+        cloneMaterial = MeshRendererGround.material;
+        cloneMaterial.color = this.Color;
     }
 
     private void OnTriggerEnter(Collider other)

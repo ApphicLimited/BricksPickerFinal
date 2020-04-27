@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public GameStates GameState;
     public bool IsGameStarted;
     public bool IsGameDone;
+    public Material MetreDetecterMaterial;
 
     public event Action OnGameStarted;
     public event Action OnGameDone;
