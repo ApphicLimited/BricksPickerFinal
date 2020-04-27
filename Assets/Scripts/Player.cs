@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public float ForwardSpeed;
     public float Speed;
+    public float AnimatorSpeed;
     public BaseColour BaseColour;
     public SkinnedMeshRenderer SkinnedMeshRenderer;
     public StackCollector StackCollector;
@@ -41,6 +42,8 @@ public class Player : MonoBehaviour
 
         transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed);
         nextPosition.z = transform.position.z;
+
+        Animator.speed = AnimatorSpeed;
     }
 
     private void FixedUpdate()
@@ -65,6 +68,8 @@ public class Player : MonoBehaviour
     {
         Animator.SetBool("Kicking", true);
         Animator.SetBool("Running", false);
+
+        Animator.speed = 1;
     }
 
     public void MoveToSide(Vector3 position)

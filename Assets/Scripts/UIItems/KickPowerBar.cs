@@ -38,6 +38,7 @@ public class KickPowerBar : MonoBehaviour
 
         GameManager.instance.StackManager.StackThrowingForce = 30 * FillAmount.fillAmount;
         GameManager.instance.PlayerManager.Player.ForwardSpeed = Mathf.Clamp(20 * FillAmount.fillAmount, 15, 20);
+        GameManager.instance.PlayerManager.Player.AnimatorSpeed = Mathf.Clamp(FillAmount.fillAmount, 0.3f, 1);
     }
 
     private IEnumerator StarAnimations(float seconds)
