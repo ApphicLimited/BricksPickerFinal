@@ -72,7 +72,6 @@ public class Stack : MonoBehaviour
             if(transform.name == "Stack")
             {
                 animation.Play("BrickScale");
-                StartCoroutine(CubeCreate());
             }
             else
             {
@@ -92,7 +91,7 @@ public class Stack : MonoBehaviour
     }
 
 
-    IEnumerator CubeCreate()
+    public IEnumerator CubeCreate()
     {
         cube.SetActive(true);
         yield return new WaitForSeconds(0.5f);
@@ -108,6 +107,8 @@ public class Stack : MonoBehaviour
     public void MoveOverCollecter(Vector3 newPos, AfterMoved action = null)
     {
         transform.position = newPos;
+
+        
 
         AfterMovedDoAction = action;
         DoAction();

@@ -130,6 +130,15 @@ public class StackCollector : MonoBehaviour
 
                 PlaySound();
 
+                if (collision.transform.name == "Stack")
+                {
+                    StartCoroutine(collision.transform.GetComponent<Stack>().CubeCreate());
+                }
+                else
+                {
+
+                }
+
                 GameManager.instance.SuperPowerController.AddPower(CollectedStacks.Last().Point);
                 GameManager.instance.ScoreController.CurrentCollectedStackNumber++;
                 GameManager.instance.StackManager.Stacks.Remove(collision.collider.GetComponent<Stack>());

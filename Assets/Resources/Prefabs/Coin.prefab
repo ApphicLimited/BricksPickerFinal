@@ -125,6 +125,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParticleSystem: {fileID: 19800004, guid: 757df604761b8ef42831192c70ee1099, type: 3}
+--- !u!122 &7968118735386844048
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544021806669079467}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278206804
+  m_Size: 1.38
 --- !u!1001 &2706728807079490913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222,6 +234,12 @@ PrefabInstance:
 --- !u!4 &6983551732409409147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5a0c8c60a8f440e4fb3935067b76b804,
+    type: 3}
+  m_PrefabInstance: {fileID: 2706728807079490913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5544021806669079467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1630186551423166774, guid: 5a0c8c60a8f440e4fb3935067b76b804,
     type: 3}
   m_PrefabInstance: {fileID: 2706728807079490913}
   m_PrefabAsset: {fileID: 0}

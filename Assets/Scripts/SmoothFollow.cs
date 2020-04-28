@@ -74,6 +74,7 @@ public class SmoothFollow : MonoBehaviour
 
     public void GoForward()
     {
+        enabled = true;
         isGoingForward = true;
         height = 10;
         distance = 10;
