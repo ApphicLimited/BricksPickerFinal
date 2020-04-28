@@ -41,7 +41,7 @@ public class DownChevronController : MonoBehaviour
 
         CloneMaterials.Reverse();
 
-        InvokeRepeating("InvokeLightUp", AnimationRepSecond, 1);
+        InvokeRepeating("InvokeLightUp", 1, AnimationRepSecond);
     }
 
     private void InvokeLightUp()
