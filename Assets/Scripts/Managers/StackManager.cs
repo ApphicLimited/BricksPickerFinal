@@ -10,6 +10,8 @@ public class StackManager : MonoBehaviour
     public Material MaterialSource;
     public TMP_Text TextStackCount;
 
+    public GameObject Stack;
+
     public float MaxStackWaveStrength;
     public float MinStackWaveStrength;
     public float PerStackWaveReductionAmount;
@@ -32,6 +34,15 @@ public class StackManager : MonoBehaviour
     {
         foreach (var item in Stacks)
             item.ResetColour();
+    }
+
+    private void OnValidate()
+    {
+        //foreach (var item in Stacks)
+        //{
+        //    GameObject go = Instantiate(Stack);
+        //    go.transform.position = item.transform.position;
+        //}
     }
 
     #region Events

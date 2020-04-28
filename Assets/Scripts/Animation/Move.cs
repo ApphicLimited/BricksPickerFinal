@@ -40,11 +40,11 @@ public class Move : MonoBehaviour
         {
             if (XAxis)
             {
-                nextPosition = new Vector3(nextPosition.y, transform.position.x);
+                nextPosition = new Vector3(nextPosition.x, transform.position.y, transform.position.z);
             }
             else if (YAxis)
             {
-                nextPosition = new Vector3(transform.position.x, nextPosition.y);
+                nextPosition = new Vector3(transform.position.x, nextPosition.y, transform.position.z);
             }
             else if (ZAxis)
             {
