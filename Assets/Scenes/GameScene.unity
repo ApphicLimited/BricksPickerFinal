@@ -129,25 +129,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2415307300176431846, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: YAxis
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415307300176431846, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: nextPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415307300176431846, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: nextPosition.y
-      value: -2.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415307300176431846, guid: 903278ced46af404db02965d72dbd54e,
-        type: 3}
-      propertyPath: nextPosition.z
-      value: 0
+    - target: {fileID: 194629805, guid: 903278ced46af404db02965d72dbd54e, type: 3}
+      propertyPath: DownChevronPrefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3107169736324981452, guid: 903278ced46af404db02965d72dbd54e,
         type: 3}
