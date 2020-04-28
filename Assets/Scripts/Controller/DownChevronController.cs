@@ -8,6 +8,8 @@ public class DownChevronController : MonoBehaviour
     public GameObject DownChevronPrefab;
     public int AmountOfDownChevron;
     public float AnimationRepSecond;
+    public Color LightOnColour;
+    public Color LightOFFColour;
     [Space]
     public Transform FirstSpawnPoint;
     public float ZAxisSpace;
@@ -49,10 +51,10 @@ public class DownChevronController : MonoBehaviour
 
         for (int i = 0; i < CloneMaterials.Count; i++)
         {
-            CloneMaterials[i].color = Color.white;
+            CloneMaterials[i].color = LightOFFColour;
         }
 
-        CloneMaterials[currentIndex].color = Color.red;
+        CloneMaterials[currentIndex].color = LightOnColour;
 
     }
 }
