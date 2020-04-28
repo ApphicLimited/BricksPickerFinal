@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour
     public Transform StartTransform;
     public Transform[] TrackPathTransforms;
 
-    public BaseColour CurrentColour { get; set; }
+    public BaseColour CurrentColour;
     private int currentTrackPathTransformsIndex;
 
     private void Start()

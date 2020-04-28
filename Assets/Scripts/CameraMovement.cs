@@ -47,7 +47,6 @@ public class CameraMovement : MonoBehaviour
         {
             desiredPosition = KickingPos.position;
             transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref Velocity, SmoothSpeed);
-            //transform.LookAt(currentTarget);
             follow.target = KickingPos;
         }
         else if (GameManager.instance.GameState == GameStates.GameOnGoing && follow.target != InGamePos && follow.target != KickingPos)
@@ -58,11 +57,6 @@ public class CameraMovement : MonoBehaviour
         {
             follow.target = StarPos;
         }
-
-        // Smoothly move the camera towards that target position
-        //transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref Velocity, SmoothSpeed);
-
-        //transform.LookAt(currentTarget);
     }
 
     private void OnValidate()
@@ -70,11 +64,6 @@ public class CameraMovement : MonoBehaviour
         if (!RunInEditor)
             return;
 
-        follow.target = KickingPos;
-
-        // Smoothly move the camera towards that target position
-        //transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref Velocity, SmoothSpeed);
-
-        //transform.LookAt(TargetPlayer);
+        follow.target = KickingPos;;
     }
 }

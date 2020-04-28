@@ -22,13 +22,4 @@ public class Elastic : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, nextPos, Time.deltaTime * AnimationSpeed);
         transform.position = new Vector3(transform.position.x, transform.position.y, Target.position.z);
     }
-
-    //private void FixedUpdate()
-    //{
-    //    //float step = Time.deltaTime * AnimationSpeed;
-    //    //transform.position = Vector3.MoveTowards(transform.position, nextPos, step);
-
-    //    transform.position = Vector3.Lerp(transform.position, nextPos, Time.deltaTime * AnimationSpeed);
-    //    transform.position = new Vector3(transform.position.x, transform.position.y, Target.position.z);
-    //}
 }

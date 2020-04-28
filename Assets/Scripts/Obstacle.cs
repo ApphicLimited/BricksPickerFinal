@@ -9,12 +9,11 @@ public class Obstacle : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.instance.GameState!= GameStates.GameOnGoing)
+        if (GameManager.instance.GameState != GameStates.GameOnGoing)
             return;
 
-        if (Vector3.Distance(transform.position,GameManager.instance.PlayerManager.Player.transform.position)< MinDistance)
-        {
-            AnimationMove.StartAnimation = true;
-        }
+        if (AnimationMove.StartAnimation == false)
+            if (Vector3.Distance(transform.position, GameManager.instance.PlayerManager.Player.transform.position) < MinDistance)
+                AnimationMove.StartAnimation = true;
     }
 }

@@ -7,34 +7,31 @@ public class AudioManager : MonoBehaviour
     // public Clips[] Audioclips;
 
     // private List<SourceInfo> sources = new List<SourceInfo>();
-
-
     public AudioSource Audio_SmallBricks;
     public AudioSource Audio_BigBricks;
     public AudioSource Audio_ColorFlow;
     public AudioSource Audio_Redlight;
 
+    //private void Awake()
+    //{
+    //    //SetVolumeFirstTime();
 
-    private void Awake()
-    {
-        //SetVolumeFirstTime();
+    //    //CreateSources();
 
-        //CreateSources();
+    //    //SetToogleVolume();
+    //    //SetVolume();
+    //}
 
-        //SetToogleVolume();
-        //SetVolume();
-    }
-
-    private void Update()
-    {
-        // foreach (var source in sources)
-        //{
-        // if ("CollectBrick".ToLower() == source.Source.gameObject.name.ToLower())
-        //  {
-        //  source.Source.Play();
-        // }
-        // }
-    }
+    //private void Update()
+    //{
+    //    // foreach (var source in sources)
+    //    //{
+    //    // if ("CollectBrick".ToLower() == source.Source.gameObject.name.ToLower())
+    //    //  {
+    //    //  source.Source.Play();
+    //    // }
+    //    // }
+    //}
 
     //private void CreateSources()
     //{

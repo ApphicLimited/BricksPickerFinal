@@ -21,12 +21,8 @@ public class MetreDetecter : MonoBehaviour
         TextBackMetre.text = "X"+Metre.ToString();
 
         MeshRendererGround = transform.GetChild(2).GetComponent<MeshRenderer>();
-    }
 
-    private void Update()
-    {
-        if (cloneMaterial == null)
-            SetUpMaterial();
+        SetUpMaterial();
     }
 
     private void SetUpMaterial()

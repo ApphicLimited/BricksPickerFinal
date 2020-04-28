@@ -22,10 +22,4 @@ public class CoinController : MonoBehaviour
             TextCoin.text = collectedCoins.ToString();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

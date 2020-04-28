@@ -40,27 +40,6 @@ public class TouchController : MonoBehaviour
             initialPos = Input.mousePosition;
         if (Input.GetMouseButtonUp(0))
             Calculate(Input.mousePosition);
-
-
-
-        //switch (touchPhase)
-        //{
-        //    case TouchPhase.Began:
-        //        touchPos = currentTouch.position;
-        //        break;
-        //    case TouchPhase.Ended:
-        //        if (currentTouch.position.x > touchPos.x + TouchSenseDistance)
-        //        {
-        //            Debug.Log("right");
-                 
-        //        }
-        //        else if (currentTouch.position.x < touchPos.x + TouchSenseDistance)
-        //        {
-        //            Debug.Log("left");
-        //            GameManager.instance.PlayerManager.MoveToSide(TouchSides.Left);
-         //        }
-        //        break;
-        //}
     }
 
     void Calculate(Vector3 finalPos)

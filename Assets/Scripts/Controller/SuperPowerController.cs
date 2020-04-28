@@ -83,8 +83,6 @@ public class SuperPowerController : MonoBehaviour
         RedlightAudio.PlayClip("Audio_Redlight");
     }
 
-
-
     private void SpawnPlus(Vector3 pos)
     {
         GameObject go = Instantiate(PlusStuckPoint.gameObject, ParentCanvas);

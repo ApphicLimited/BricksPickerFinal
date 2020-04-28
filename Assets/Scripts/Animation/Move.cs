@@ -36,7 +36,7 @@ public class Move : MonoBehaviour
         if (!StartAnimation)
             return;
 
-        if (ownTransform!=null)
+        if (ownTransform != null)
         {
             if (XAxis)
             {
@@ -54,7 +54,7 @@ public class Move : MonoBehaviour
             ownTransform.position = Vector3.Lerp(ownTransform.position, nextPosition, AnimationSpeed * Time.deltaTime);
         }
 
-        if (rectTransform!=null)
+        if (rectTransform != null)
         {
             if (XAxis)
             {
@@ -69,7 +69,7 @@ public class Move : MonoBehaviour
         }
     }
 
-    private void OnValidate()
+        private void OnValidate()
     {
         if (SetNativePosition)
         {

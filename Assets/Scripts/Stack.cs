@@ -12,7 +12,7 @@ public class Stack : MonoBehaviour
     public Rigidbody Rigidbody;
     public Animation animation;
     public GameObject cube;
-    public BaseColour CurrentColour { get; set; }
+    public BaseColour CurrentColour;
 
     private Material materialClone;
 
@@ -24,12 +24,6 @@ public class Stack : MonoBehaviour
         animation = GetComponent<Animation>();
         SetUpMaterial();
         ChangeColour(MainColour);
-    }
-
-    private void Update()
-    {
-        if (GameManager.instance.GameState != GameStates.GameOnGoing)
-            return;
     }
 
     private void SetUpMaterial()

@@ -33,12 +33,6 @@ public class ScoreController : MonoBehaviour
         GameManager.instance.OnGameDone += OnGameDone;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void CheckBestScore()
     {
         if (PlayerPrefs.HasKey(Constants.BEST_SCORE_KEY))

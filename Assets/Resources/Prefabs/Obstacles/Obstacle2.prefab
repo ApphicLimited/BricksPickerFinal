@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 123
   m_IsActive: 1
 --- !u!4 &5861333967416737858
 Transform:
@@ -124,3 +124,7 @@ MonoBehaviour:
   AnimationSpeed: 10
   nextPosition: {x: 3.2, y: 1.91, z: -119.68}
   SetNativePosition: 0
+  MoveAllAxis: 0
+  XAxis: 0
+  YAxis: 0
+  ZAxis: 0

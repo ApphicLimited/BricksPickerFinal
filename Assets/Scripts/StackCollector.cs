@@ -17,9 +17,12 @@ public class StackCollector : MonoBehaviour
     private Material materialClone;
 
     private float perStackHeightDistance = 0.38f;
+    private bool IsPowerUpUsed;
 
     private void Start()
     {
+        IsPowerUpUsed = false;
+
         SuperPowerController.OnSuperPowerActivated += OnSuperPowerActivated;
         GameManager.instance.OnGameStarted += OnGameStarted;
     }
@@ -58,11 +61,13 @@ public class StackCollector : MonoBehaviour
 
     private void UseMaxScale()
     {
+        IsPowerUpUsed = true;
         Head.transform.localScale = new Vector3(CollecterMaxScale, transform.localScale.y, transform.localScale.z);
     }
 
     private void UseMinScale()
     {
+        IsPowerUpUsed = false;
         Head.transform.localScale = new Vector3(CollecterMinScale, transform.localScale.y, transform.localScale.z);
     }
 
@@ -96,20 +101,17 @@ public class StackCollector : MonoBehaviour
     {
         if (collision.collider.tag == Constants.TAG_STACK)
         {
-            if (collision.collider.GetComponent<Stack>().CurrentColour == GameManager.instance.PlayerManager.CurrentColour)
+            if (collision.collider.GetComponent<Stack>().CurrentColour.ToString()== GameManager.instance.PlayerManager.CurrentColour.ToString())
             {
                 CollectedStacks.Add(collision.collider.GetComponent<Stack>());
 
                 if (CollectedStacks.Count == 1)
                 {
-                    Debug.Log("Calisti "+ CollectedStacks.Count);
                     CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z), DoSomething);
                     CollectedStacks.Last().Elastic.AnimationSpeed = GameManager.instance.StackManager.MaxStackWaveStrength;
                 }
                 else
                 {
-                    //float perAnimationRange = CollectedStacks.Count / GameManager.instance.StackManager.MaxStackWaveStrength;
-
                     CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z), DoSomething);
                     CollectedStacks.Last().Elastic.AnimationSpeed = GameManager.instance.StackManager.MaxStackWaveStrength;
 
@@ -133,10 +135,6 @@ public class StackCollector : MonoBehaviour
                 if (collision.transform.name == "Stack")
                 {
                     StartCoroutine(collision.transform.GetComponent<Stack>().CubeCreate());
-                }
-                else
-                {
-
                 }
 
                 GameManager.instance.SuperPowerController.AddPower(CollectedStacks.Last().Point);

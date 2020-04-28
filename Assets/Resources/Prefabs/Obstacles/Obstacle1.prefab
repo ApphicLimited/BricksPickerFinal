@@ -124,3 +124,7 @@ MonoBehaviour:
   AnimationSpeed: 10
   nextPosition: {x: 0, y: -2.18, z: -111.98}
   SetNativePosition: 0
+  MoveAllAxis: 0
+  XAxis: 0
+  YAxis: 0
+  ZAxis: 0

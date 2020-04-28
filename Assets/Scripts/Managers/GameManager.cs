@@ -19,13 +19,33 @@ public class GameManager : MonoBehaviour
     public ScoreController ScoreController;
     public CoinController CoinController;
     public TimeController TimeController;
-
     public SmoothFollow SmothFollow;
-
     public GameStates GameState;
-    public bool IsGameStarted;
-    public bool IsGameDone;
     public Material MetreDetecterMaterial;
+
+    private bool isGameStarted;
+    public bool IsGameStarted
+    {
+        get { return IsGameStarted; }
+        set
+        {
+            isGameStarted = value;
+            if (isGameStarted)
+                OnGameStarted?.Invoke();
+        }
+    }
+    private bool isGameDone { get; set; }
+    public bool IsGameDone
+    {
+        get
+        { return isGameDone; }
+        set
+        {
+            isGameDone = value;
+            if (IsGameDone)
+                OnGameDone?.Invoke();
+        }
+    }
 
     public event Action OnGameStarted;
     public event Action OnGameDone;
@@ -41,27 +61,12 @@ public class GameManager : MonoBehaviour
         }
         else if (this != instance)
             Destroy(this);
+
+        Application.targetFrameRate = 60;
     }
 
     private void Start()
     {
         IsGameStarted = false;
-    }
-
-    private void Update()
-    {
-        if (GameState != GameStates.GameOnGoing)
-            return;
-
-        if (IsGameStarted)
-        {
-            OnGameStarted?.Invoke();
-            IsGameStarted = false;
-        }
-        else if (IsGameDone)
-        {
-            OnGameDone?.Invoke();
-            IsGameDone = false;
-        }
     }
 }

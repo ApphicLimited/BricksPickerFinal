@@ -36,15 +36,6 @@ public class StackManager : MonoBehaviour
             item.ResetColour();
     }
 
-    private void OnValidate()
-    {
-        //foreach (var item in Stacks)
-        //{
-        //    GameObject go = Instantiate(Stack);
-        //    go.transform.position = item.transform.position;
-        //}
-    }
-
     #region Events
 
     private void OnSuperPowerActivated(bool IsActivated)
