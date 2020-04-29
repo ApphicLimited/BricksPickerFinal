@@ -29,6 +29,7 @@ public class SmoothFollow : MonoBehaviour
             CameraMovement.enabled = false;
             if (Mathf.Abs(transform.position.z - target.position.z) < distance)
             {
+                GameManager.instance.NextButton.SetActive(true);
                 return;
             }
             // Calculate the current rotation angles
