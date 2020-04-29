@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public SmoothFollow SmothFollow;
     public GameStates GameState;
     public Material MetreDetecterMaterial;
+    public GameObject NextButton, RestartButton;
 
     private bool isGameStarted;
     public bool IsGameStarted
@@ -62,11 +63,20 @@ public class GameManager : MonoBehaviour
         else if (this != instance)
             Destroy(this);
 
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 60;        
     }
 
     private void Start()
     {
         IsGameStarted = false;
+    }
+
+    public void NextLevel()
+    {
+        GameStarter.instance.LoadNextLevel();
+    }
+    public void RestartLevel()
+    {
+        GameStarter.instance.RestartLevel();
     }
 }

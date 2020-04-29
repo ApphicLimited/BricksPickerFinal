@@ -59,17 +59,17 @@ public class Stack : MonoBehaviour
             Rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionZ;
             GetComponent<BoxCollider>().enabled = true;
 
-            if(animation.isPlaying)
+            if (animation.isPlaying)
             {
                 animation.Stop();
             }
-            if(transform.name == "Stack")
-            {
-                animation.Play("BrickScale");
-            }
-            else
+            if (transform.name.Contains("Stack2"))
             {
                 animation.Play("BrickScale2");
+            }
+            else if (transform.name.Contains("Stack"))
+            {
+                animation.Play("BrickScale");
             }
         }
         else
@@ -102,7 +102,7 @@ public class Stack : MonoBehaviour
     {
         transform.position = newPos;
 
-        
+
 
         AfterMovedDoAction = action;
         DoAction();

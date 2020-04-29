@@ -16,4 +16,13 @@ public class Obstacle : MonoBehaviour
             if (Vector3.Distance(transform.position, GameManager.instance.PlayerManager.Player.transform.position) < MinDistance)
                 AnimationMove.StartAnimation = true;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.instance.GameState = GameStates.GameOver;
+            GameStarter.instance.Fail();
+        }
+    }
 }
