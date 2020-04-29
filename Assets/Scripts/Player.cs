@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 {
     public float ForwardSpeed;
     public float Speed;
-    public float AnimatorSpeed;
     public BaseColour BaseColour;
     public SkinnedMeshRenderer SkinnedMeshRenderer;
     public StackCollector StackCollector;
@@ -16,6 +15,16 @@ public class Player : MonoBehaviour
     public Rigidbody Rigidbody;
 
     public BaseColour CurrentBaseColour { get; set; }
+    private float animatorSpeed;
+    public float AnimatorSpeed
+    {
+        get { return animatorSpeed; }
+        set
+        {
+            animatorSpeed = value;
+            Animator.speed = value;
+        }
+    }
 
     private Material materialClone;
     private Vector3 nextPosition;
@@ -26,29 +35,22 @@ public class Player : MonoBehaviour
         CurrentBaseColour = BaseColour;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         if (GameManager.instance.GameState != GameStates.GameOnGoing)
             return;
 
-        if (Math.Abs(GameManager.instance.PlayerManager.EndTransform.position.z- transform.position.z) < 3f)
+        if (Math.Abs(GameManager.instance.PlayerManager.EndTransform.position.z - transform.position.z) < 3f)
         {
             if (IsArrived == false)
                 ArrivedDest();
             return;
         }
 
-        StackCollector.transform.position = new Vector3(transform.position.x, StackCollector.transform.position.y, transform.position.z + 1.9f);
-
         transform.Translate(Vector3.forward * Time.deltaTime * ForwardSpeed);
         nextPosition.z = transform.position.z;
+        StackCollector.transform.position = new Vector3(transform.position.x, StackCollector.transform.position.y, transform.position.z + 1.9f);
 
-        Animator.speed = AnimatorSpeed;
-    }
-
-    private void FixedUpdate()
-    {
         if (GameManager.instance.SmothFollow.CameraMovement.IsApproachedToEndPoint)
             return;
 

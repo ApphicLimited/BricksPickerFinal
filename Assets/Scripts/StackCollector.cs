@@ -91,12 +91,6 @@ public class StackCollector : MonoBehaviour
         }
     }
 
-    private void DoSomething()
-    {
-        for (int i = 0; i < CollectedStacks.Count; i++)
-            CollectedStacks[i].EnableElastic(true, transform);
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == Constants.TAG_STACK)
@@ -107,21 +101,23 @@ public class StackCollector : MonoBehaviour
 
                 if (CollectedStacks.Count == 1)
                 {
-                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z), DoSomething);
+                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z));
+                    CollectedStacks.Last().EnableElastic(true, transform);
                     CollectedStacks.Last().Elastic.AnimationSpeed = GameManager.instance.StackManager.MaxStackWaveStrength;
                 }
                 else
                 {
-                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z), DoSomething);
+                    CollectedStacks.Last().MoveOverCollecter(new Vector3(transform.position.x, 0.15f, transform.position.z));
+                    CollectedStacks.Last().EnableElastic(true, transform);
                     CollectedStacks.Last().Elastic.AnimationSpeed = GameManager.instance.StackManager.MaxStackWaveStrength;
 
                     for (int i = 0; i < CollectedStacks.Count - 1; i++)
                     {
                         CollectedStacks[i].MoveOverCollecter(new Vector3(
                             transform.position.x, CollectedStacks[i].transform.position.y + perStackHeightDistance / 2f,
-                            transform.position.z),
-                            DoSomething);
+                            transform.position.z));
 
+                        CollectedStacks[i].EnableElastic(true, transform);
                         CollectedStacks[i].Elastic.AnimationSpeed -= GameManager.instance.StackManager.PerStackWaveReductionAmount;
                         BalanceMassScale(CollectedStacks[i].Rigidbody.mass);
 

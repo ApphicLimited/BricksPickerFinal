@@ -16,12 +16,8 @@ public class Stack : MonoBehaviour
 
     private Material materialClone;
 
-    public delegate void AfterMoved();
-    public AfterMoved AfterMovedDoAction;
-
     private void Start()
     {
-        animation = GetComponent<Animation>();
         SetUpMaterial();
         ChangeColour(MainColour);
     }
@@ -59,11 +55,11 @@ public class Stack : MonoBehaviour
             Rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionZ;
             GetComponent<BoxCollider>().enabled = true;
 
-            if(animation.isPlaying)
+            if (animation.isPlaying)
             {
                 animation.Stop();
             }
-            if(transform.name == "Stack")
+            if (transform.name == "Stack")
             {
                 animation.Play("BrickScale");
             }
@@ -98,19 +94,8 @@ public class Stack : MonoBehaviour
         Destroy(this);
     }
 
-    public void MoveOverCollecter(Vector3 newPos, AfterMoved action = null)
+    public void MoveOverCollecter(Vector3 newPos)
     {
         transform.position = newPos;
-
-        
-
-        AfterMovedDoAction = action;
-        DoAction();
-    }
-
-    private void DoAction()
-    {
-        AfterMovedDoAction?.Invoke();
-        AfterMovedDoAction = null;
     }
 }

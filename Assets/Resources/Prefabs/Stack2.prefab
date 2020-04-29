@@ -119,6 +119,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 6909499682970739238}
   animation: {fileID: 961025482059455889}
   cube: {fileID: 5332322787016890022}
+  CurrentColour: 0
 --- !u!54 &6909499682970739238
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_CullingType: 1
 --- !u!1 &5332322787016890022
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,4 +280,4 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_CullingType: 1
